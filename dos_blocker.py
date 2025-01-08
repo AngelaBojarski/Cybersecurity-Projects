@@ -39,9 +39,9 @@ def packet_callback(packet):
 
 if __name__ == "__main__":
     #Check for root privledges
-    #if os.geteuid != 0:
-    #    print("This script requires root privileges.")
-    #    sys.exit(1)
+    if os.geteuid != 0:
+        print("This script requires root privileges.")
+        sys.exit(1)
 
     #Initalize packets dictionary for future IP, start time, and blocked set
     packet_count = defaultdict(int)
