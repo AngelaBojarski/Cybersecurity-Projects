@@ -1,7 +1,9 @@
+#Importing necessary modules
 import random
 
 def generate_random_ip():
-    """Generate a random IP address."""
+    """Generate a random IP address in the range 192.168.1.0 
+    to 192.168.1.20"""
     return f"192.168.1.{random.randint(0, 20)}"
 
 def check_firewall_rules(ip, rules):
@@ -12,6 +14,7 @@ def check_firewall_rules(ip, rules):
     return "allow"  # Default action if no rule matches
 
 def main():
+    """Main function to run the program and test"""
     firewall_rules = {
         "192.168.1.1": "block",
         "192.168.1.4": "block",
@@ -21,6 +24,7 @@ def main():
         "192.168.1.19": "block"
     }
 
+    #Generate 12 different senarios and print output
     for _ in range(12):
      ip_address = generate_random_ip()
      action = check_firewall_rules(ip_address, firewall_rules)
@@ -29,4 +33,5 @@ def main():
 
 
 if __name__ == "__main__":
+    #Run the main function
     main()
