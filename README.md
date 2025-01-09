@@ -43,4 +43,4 @@ Purpose: Built off of service fingerprint to include OS
 
 ## Mini Scanner
 
-Purpose: Automate the scanning process
+Purpose: Automate the scanning process by a wrapper
